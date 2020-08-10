@@ -18,3 +18,5 @@ Route::resource('users', 'UsersController');//等同于下方注释
 Route::get('login', 'SessionsController@create')->name('login');
 Route::post('login', 'SessionsController@store')->name('login');
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
+
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
